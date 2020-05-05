@@ -28,6 +28,7 @@
             img
                 height: 20px
                 width: auto
+                margin-right: 10px
     &-logo
         background: $redColor
         border-bottom-right-radius: 90px
@@ -54,6 +55,8 @@
     padding-top: 60px
     padding-bottom: 40px
     background: #ffffff
+    background: url('../img/howEvent-bg.jpg') center center/cover no-repeat #fff
+    background-position: 0 -40px 
     &-title
         text-align: center
     &-block
@@ -82,12 +85,13 @@
                 padding: 40px 20px
                 text-align: center
     &-btn
-        padding: 20px 60px
+        padding: 20px 70px
         font-size: 40px
         color: #ffffff
         margin: 0 auto
         display: block
         margin-top: 60px
+        cursor: pointer
 .whyMe
     padding-top: 40px
     padding-bottom: 40px
@@ -121,3 +125,184 @@
             text-align: center
             font-size: 36px
             margin-top: 30px
+.feedback
+    padding-top: 40px
+    padding-bottom: 40px
+    &-title
+        text-align: center
+    &-slider
+        width: 1200px
+        margin: 0 auto
+        margin-top: 40px
+        position: relative
+        &_item
+            display: flex
+            img
+                display: block
+                margin-right: 90px
+                width: 180px
+                height: 180px
+                margin-top: 10px
+            &-text
+                font-size: 24px
+                span
+                    display: block
+                    margin-top: 30px
+                    .small
+                        font-size: 18px
+                        margin-top: 4px
+        .slick-prevs
+           position: absolute
+           right: -70px
+           top: 50px
+           cursor: pointer
+        .slick-nexts
+            position: absolute
+            left: -100px
+            top: 50px
+            cursor: pointer
+    .slick-slide
+        display: flex
+.test
+    background: url('../img/test-bg.png') center center/cover no-repeat
+    padding: 100px 0 100px 0
+    margin-top: 50px
+    &-title
+        color: #ffffff
+        width: 720px
+        margin: 0 auto
+        margin-bottom: 150px
+    &-btn
+        display: block
+        cursor: pointer
+        margin: 0 auto
+        padding: 20px 60px
+        color: #ffffff
+        font-size: 42px
+        font-family: Roboto-Medium
+.galary
+    padding-bottom: 20px
+    &-title
+        margin-top: 60px
+.reservation
+    padding-bottom: 20px
+    &-title
+        margin-top: 60px
+.question
+    background: url('../img/question-bg.png') center center/cover no-repeat
+    padding-top: 130px
+    padding-bottom: 117px
+    &-title
+        width: max-content
+        text-align-last: left
+        margin-left: 130px
+        font-size: 44px
+        color: #ffffff
+    &-btn
+        display: block
+        cursor: pointer
+        background: transparent
+        border: 3px solid $redColor
+        padding: 18px 100px
+        color: $redColor
+        margin: 0 auto
+        margin-top: 50px
+        font-family: Roboto-Bold
+        width: max-content
+        text-decoration: none
+.contact
+    padding-top: 70px
+    padding-bottom: 150px
+    background: #A90F14
+    position: relative
+    &-title
+        color: #ffffff
+    &-form
+        display: flex
+        margin: 0 auto
+        width: 1600px
+        justify-content: space-between
+        &_item
+            margin-top: 30px
+            &-title
+                color: #ffffff
+                font-size: 36px
+                margin-bottom: 10px
+            &-input 
+                width: 400px
+                font-size: 24px
+                border: none
+                outline: none
+                padding: 16px 24px
+                border-radius: 40px
+                &_tel
+                    width: 200px
+                    letter-spacing: .14em
+            &-tel
+                display: flex
+            &-telephone
+                background: #ffffff
+                font-size: 24px
+                border-radius: 40px
+                padding: 16px 24px
+                margin-right: 10px
+                cursor: pointer
+        &_btn
+            background: transparent
+            border: 3px solid #ffffff
+            color: #ffffff
+            font-size: 24px
+            padding: 16px 60px
+            margin-top: 50px
+            cursor: pointer
+    &-car
+        position: absolute
+        top: 240px
+        left: 100px
+.contactSocial
+    padding: 70px 0
+    background: #363636
+    &-title
+        color: #ffffff
+    &-block
+        display: flex
+        margin: 0 auto
+        width: 1400px
+        margin-top: 40px
+        justify-content: space-between
+    &-item
+        display: flex
+        &_telephone
+            margin-top: 20px
+        img
+            margin-right: 20px
+            width: 70px
+            height: 70px
+        &_icons
+            display: flex
+            flex-direction: column
+            img
+                margin-bottom: 6px
+                width: 34px
+                height: 34px
+        a
+            color: #ffffff
+            text-decoration: none
+            font-size: 24px
+        &_text
+            color: #ffffff
+            font-size: 24px
+            margin-top: 4px
+.footer
+    background: #1B1C1C
+    padding: 40px 0
+    &-logo
+        margin: 0 auto
+        img
+            display: block
+            margin: 0 auto
+    &-radio
+        text-align: center
+        color: #ffffff
+        margin-top: 20px
+        font-size: 22px
