@@ -1,0 +1,123 @@
+.header
+    position: relative
+    padding-bottom: 120px
+    &-background
+        position: absolute
+        z-index: -1
+    &-nav
+        display: flex
+        justify-content: space-between
+        &_social
+            display: flex
+            margin-right: 200px
+            margin-top: 40px
+            width: 300px
+            justify-content: space-between
+        &_lang
+            color: #ffffff
+            a
+                color: #ffffff
+                text-decoration: none
+                font-size: 24px
+        &_phone
+            a
+                color: #ffffff
+                text-decoration: none
+                font-size: 24px
+                line-height: 30px
+            img
+                height: 20px
+                width: auto
+    &-logo
+        background: $redColor
+        border-bottom-right-radius: 90px
+        padding-bottom: 10px
+    &-title
+        margin-top: 280px
+        text-align: center
+        color: #ffffff
+    &-subtitle
+        text-align: center
+        font-size: 32px
+        color: #BCBEC0  
+        width: 60%
+        margin: 0 auto
+        margin-top: 20px
+    &-btn
+        margin: 0 auto
+        display: block
+        margin-top: 100px
+        color: #ffffff
+        padding: 14px 55px
+        cursor: pointer
+.howEvent
+    padding-top: 60px
+    padding-bottom: 40px
+    background: #ffffff
+    &-title
+        text-align: center
+    &-block
+        width: 80%
+        margin: 0 auto
+        margin-top: 50px
+        display: flex
+        &_left
+            padding: 0 40px 0 0
+            &-item
+                display: flex
+                margin-bottom: 30px 
+            &-text
+                width: 500px
+                font-size: 22px
+                padding: 40px 20px
+                text-align: center
+        &_right
+            padding: 0 0 0 40px
+            &-item
+                display: flex
+                margin-bottom: 30px 
+            &-text
+                width: 500px
+                font-size: 22px
+                padding: 40px 20px
+                text-align: center
+    &-btn
+        padding: 20px 60px
+        font-size: 40px
+        color: #ffffff
+        margin: 0 auto
+        display: block
+        margin-top: 60px
+.whyMe
+    padding-top: 40px
+    padding-bottom: 40px
+    &-title
+        text-align: center
+    &-block
+        margin: 0 auto
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 40px
+        margin-top: 60px
+        width: 1240px
+        &_item
+            width: 600px
+            margin: 0 auto
+            border-radius: 20px
+            padding: 25px 80px 40px 80px
+            img
+                width: 70px
+                display: block
+                margin: 0 auto
+            &:nth-child(1)
+                background: rgba(188, 190, 192, 0.25)
+            &:nth-child(2)
+                background: rgba(188, 190, 192, 0.50)
+            &:nth-child(3)
+                background: #BCBEC0
+            &:nth-child(4)
+                background: rgba(188, 190, 192, 0.75)
+        &_text
+            text-align: center
+            font-size: 36px
+            margin-top: 30px
