@@ -21,17 +21,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
         modalWindow = document.querySelector('.modal')
         headerBtn.addEventListener('click', () => {
             modalWindow.style.top = window.pageYOffset + 'px';
-            modalWindow.style.width = '100%';
-            modalWindow.style.opacity = '1';
-            document.body.style.overflow = 'hidden';
+            modalWindow.style.display = 'block';
+            setTimeout(() => {
+                modalWindow.style.zIndex = '1000';
+                modalWindow.style.opacity = '1';
+                document.body.style.overflow = 'hidden';
+            }, 100)
         })
         modalWindow.addEventListener('click', (e) => {
             if (e.target.classList.contains('modal')) {
-                modalWindow.style.width = '0';
                 modalWindow.style.opacity = '0';
+                modalWindow.style.zIndex = '-1';
                 document.body.style.overflowY = 'scroll';
+                setTimeout(() => {
+                    modalWindow.style.display = 'none'
+                }, 400)
             }
         })
     }
     firsBtn('.header-btn');
+
 });
