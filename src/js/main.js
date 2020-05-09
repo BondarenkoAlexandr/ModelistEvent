@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $(document).ready(function(){
         $('.feedback-slider').slick({
             dots: false,
-            prevArrow: '<div id="prev" type="button" class="slick-prevs"><img src="img/left-arrow_dis.png"></div>',
-            nextArrow: '<div id="next" type="button" class="slick-nexts"><img src="img/right-arrow.png"></div>',
+            prevArrow: '<div id="prev" type="button" class="slick-prevs"><img src="img/left-arrow_dis.png" alt="left-arrow"></div>',
+            nextArrow: '<div id="next" type="button" class="slick-nexts"><img src="img/right-arrow.png" alt="right-arrow"></div>',
             infinite: false,
             arrows: true,
             fade: true,
@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // Смена цвета стрелок в слайдере
 
     window.onload = function slickDis(button) {
-        console.log(button);
         document.getElementById('prev').addEventListener('click', () => {
             if (document.getElementById('prev').classList.contains('slick-disabled')) {
                 document.querySelector('.slick-prevs img').src = '../img/left-arrow_dis.png'
