@@ -1,20 +1,44 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     
-    
-    
     $(document).ready(function(){
         $('.feedback-slider').slick({
             dots: false,
-            prevArrow: '<div id="prev" type="button" class="slick-nexts"><img src="img/left-arrow.png"></div>',
-            nextArrow: '<div id="next" type="button" class="slick-prevs"><img src="img/right-arrow.png"></div>',
-            infinite: true,
+            prevArrow: '<div id="prev" type="button" class="slick-prevs"><img src="img/left-arrow_dis.png"></div>',
+            nextArrow: '<div id="next" type="button" class="slick-nexts"><img src="img/right-arrow.png"></div>',
+            infinite: false,
             arrows: true,
             fade: true,
-            speed: 400,
-            autoplay: true,
-            autoplaySpeed: 4000
+            speed: 400
         });
     });
+    
+    // Смена цвета стрелок в слайдере
+
+    window.onload = function slickDis(button) {
+        console.log(button);
+        document.getElementById('prev').addEventListener('click', () => {
+            if (document.getElementById('prev').classList.contains('slick-disabled')) {
+                document.querySelector('.slick-prevs img').src = '../img/left-arrow_dis.png'
+   
+            } else {
+                document.querySelector('.slick-prevs img').src = '../img/left-arrow.png' 
+            }
+            if (!document.getElementById('prev').classList.contains('slick-disabled')) {
+                document.querySelector('.slick-nexts img').src = '../img/right-arrow.png';
+            } 
+        })
+        document.getElementById('next').addEventListener('click', () => {
+            if (document.getElementById('next').classList.contains('slick-disabled')) {
+                document.querySelector('.slick-nexts img').src = '../img/right-arrow_dis.png'
+            } else {
+                document.querySelector('.slick-nexts img').src = '../img/right-arrow.png'
+                
+            }
+            if (!document.getElementById('next').classList.contains('slick-disabled')) {
+                document.querySelector('.slick-prevs img').src = '../img/left-arrow.png';
+            } 
+        })
+    }
 
     function firsBtn(button) {
         const headerBtn = document.querySelector(button),
