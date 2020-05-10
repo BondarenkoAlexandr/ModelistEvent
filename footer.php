@@ -13,10 +13,10 @@
 
 <footer class="footer">
         <div class="footer-logo">
-            <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/logo-footer.png" alt="logo">
+            <img src="<?php the_field('footer-logo') ?>" alt="logo">
         </div>
         <div class="footer-radio">
-            © 2010-2020 Радиоупрявляемый моделизм
+        <?php the_field('footer-radio') ?>
         </div>
     </footer>
     <?php wp_footer(); ?>

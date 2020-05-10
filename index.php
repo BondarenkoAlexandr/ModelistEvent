@@ -140,84 +140,42 @@ Template Name: Sample Page
             </h2>
         </div>
         <div class="feedback-slider">
-            <div class="feedback-slider_item">
+        <?php 
+
+$posts = get_field('reviews');
+
+if( $posts ): ?>
+    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+        <?php setup_postdata($post); ?>
+        <div class="feedback-slider_item">
                 <div class="feedback-slider_item-img">
-                    <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/feedback.png" alt="feedback">
-                    <span class="mobile-show">Бегущий Банкир
-                        <span class="small">Спортсмен, бизнесмен,банкир</span>
+                    <img src="<?php the_field('photo') ?>" alt="feedback">
+                    <span class="mobile-show"><?php the_field('reviews_name') ?>
+                        <span class="small"><?php the_field('small') ?></span>
                     </span>
                 </div>
                 <div class="feedback-slider_item-text">
-                    Фантастическое место для детей и взрослых. Здесь можно научиться работать 
-                    руками и головой. Здесь можно научить водить машину на максимально 
-                    приближенном к реалиям тренажере. Есть троссы для моделей и тренировок.
-                    Очень доступно и уютно.
+                <?php the_field('reviews_text') ?>
                     
-                    <span class="mobile-hide">Бегущий Банкир
-                        <span class="small">Спортсмен, бизнесмен,банкир</span>
+                    <span class="mobile-hide"><?php the_field('reviews_name') ?>
+                        <span class="small"><?php the_field('small') ?></span>
                     </span>
                 </div>
             </div>
-            <div class="feedback-slider_item">
-                <div class="feedback-slider_item-img">
-                    <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/feedback.png" alt="feedback">
-                    <span class="mobile-show">Бегущий Банкир
-                        <span class="small">Спортсмен, бизнесмен,банкир</span>
-                    </span>
-                </div>
-                <div class="feedback-slider_item-text">
-                    Фантастическое место для детей и взрослых. Здесь можно научиться работать 
-                    
-                    
-                    <span class="mobile-hide">Бегущий Банкир
-                        <span class="small">Спортсмен, бизнесмен,банкир</span>
-                    </span>
-                </div>
-            </div>
-            <div class="feedback-slider_item">
-                <div class="feedback-slider_item-img">
-                    <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/feedback.png" alt="feedback">
-                    <span class="mobile-show">Бегущий Банкир
-                        <span class="small">Спортсмен, бизнесмен,банкир</span>
-                    </span>
-                </div>
-                <div class="feedback-slider_item-text">
-                    Фантастическое место для детей и взрослых. Здесь можно научиться работать 
-                    
-                    
-                    <span class="mobile-hide">Бегущий Банкир
-                        <span class="small">Спортсмен, бизнесмен,банкир</span>
-                    </span>
-                </div>
-            </div>
-            <div class="feedback-slider_item">
-                <div class="feedback-slider_item-img">
-                    <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/feedback.png" alt="feedback">
-                    <span class="mobile-show">Бегущий Банкир
-                        <span class="small">Спортсмен, бизнесмен,банкир</span>
-                    </span>
-                </div>
-                <div class="feedback-slider_item-text">
-                    Фантастическое место для детей и взрослых. Здесь можно научиться работать 
-                    руками и головой. Здесь можно научить водить машину на максимально 
-                    приближенном к реалиям тренажере. Есть троссы для моделей и тренировок.
-                    Очень доступно и уютно.
-                    
-                    <span class="mobile-hide">Филантроп
-                        <span class="small">Спортсмен, бизнесмен,банкир</span>
-                    </span>
-                </div>
-            </div>
+    <?php endforeach; ?>
+    <?php wp_reset_postdata();?>
+<?php endif; ?>
+            
         </div>
     </section>
 
     <section class="test">
         <div class="test-title">
-            <h2>Протестировать наши гонки 
-                <br class="mobile-hide"> Вы сможете на нашей локации</h2>
+            <h2><?php the_field('test-title') ?>
+                <br class="mobile-hide"><?php the_field('mobile-hide') ?></h2>
         </div>
         <button class="test-btn btn">
-            Тест-драйв
+        <?php the_field('test-btn') ?>
         </button>
     </section>
 
@@ -226,34 +184,35 @@ Template Name: Sample Page
     <section class="reservation">
         <div class="reservation-title">
             <h2>
-                Забронировать дату мероприятия
+            <?php the_field('reservation-title') ?>
             </h2>
         </div>
+        <?php the_field('calendar') ?>
     </section>
 
     <section class="question">
         <div class="question-title">
-            <h2>Остались вопросы – скачайте PDF - презентацию</h2>
+            <h2><?php the_field('question-title') ?></h2>
             <a href="sass/style.sass" download class="question-btn btn">
-                Скачать
+            <?php the_field('question-btn') ?>
             </a>
         </div>
     </section>
 
     <section class="contact">
         <div class="contact-title">
-            <h2>Оставьте ваши контакты и мы свяжемся с вами</h2>
+            <h2><?php the_field('contact-title') ?></h2>
         </div>
         <form class="contact-form">
             <div class="contact-form_item">
                 <div class="contact-form_item-title">
-                    Имя
+                    <?php the_field('contact-form_item-title_name') ?>
                 </div>
                 <input type="text" class="contact-form_item-input" placeholder="Имя">
             </div>
             <div class="contact-form_item">
                 <div class="contact-form_item-title">
-                    Телефон
+                <?php the_field('contact-form_item-title_phone') ?>
                 </div>
                 <div class="contact-form_item-tel">
                     <div class="contact-form_item-telephone">+380</div> 
@@ -261,40 +220,40 @@ Template Name: Sample Page
                 </div>
             </div>
             <div class="contact-form_item">
-                <button class="contact-form_btn btn">Отправить</button>
+                <button class="contact-form_btn btn"><?php the_field('contact-form_btn') ?></button>
             </div>
         </form>
         <div class="contact-car">
-            <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/contact-car.png" alt="car">
+            <img src="<?php the_field('contact-car') ?>" alt="car">
         </div>
     </section>
 
     <section class="contactSocial">
         <div class="contactSocial-title">
-            <h2>Контакты</h2>
+            <h2><?php the_field('contactSocial-title') ?></h2>
         </div>
         <div class="contactSocial-block">
             <div class="contactSocial-item">
-                <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/phone-contact.png" alt="phone">
-                <a class="contactSocial-item_telephone" href="tel:+380954836969">+38 (095) 483 69 69</a>
+                <img src="<?php the_field('phone-contact') ?>" alt="phone">
+                <a class="contactSocial-item_telephone" href="tel:+380954836969"><?php the_field('contactSocial-item_telephone') ?></a>
             </div>
             <div class="contactSocial-item">
-                <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/mail.png" alt="mail">
+                <img src="<?php the_field('contactSocial-item_mail') ?>" alt="mail">
                 <div class="contactSocial-item_text">
-                    Электронная почта<br>
-                    <a href="mailto:clubmodelist@gmail.com">clubmodelist@gmail.com </a>
+                <?php the_field('contactSocial-item_text') ?><br>
+                    <a href="mailto:<?php the_field('mail') ?>"><?php the_field('mail') ?></a>
                 </div>
             </div>
             <div class="contactSocial-item">
-                <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/location.png" alt="location">
+                <img src="<?php the_field('location') ?>" alt="location">
                 <div class="contactSocial-item_text">
-                    Наш адрес: <br>
-                    г. Киев, ул. Кавказкая, 13А
+                <?php the_field('contactSocial-item_text_address') ?>: <br>
+                <?php the_field('address') ?>
                 </div>
             </div>
             <div class="contactSocial-item contactSocial-item_icons">
-                <a href="#"><img src="<?php bloginfo( 'template_url' ) ?>/assets/img/instagram.png" alt="instagram"></a>
-                <a href="#"><img src="<?php bloginfo( 'template_url' ) ?>/assets/img/facebook.png" alt="facebook"></a>
+                <a href="#"><img src="<?php the_field('instagram') ?>" alt="instagram"></a>
+                <a href="#"><img src="<?php the_field('facebook') ?>" alt="facebook"></a>
             </div>
         </div>
     </section>
