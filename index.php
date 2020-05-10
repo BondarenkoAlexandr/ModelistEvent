@@ -1,145 +1,133 @@
+<?php
+/*
+Template Name: Sample Page
+*/
+?>
 <?php get_header(); ?>
     
     <div class="howEvent">
         <div class="howEvent-title">
-            <h2>Почему круто соревноваться на суперкарах</h2>
+            <h2><?php the_field('howEvent-title')?></h2>
         </div>
         <div class="howEvent-block">
             <div class="howEvent-block_left">
                 <div class="howEvent-block_left-item">
-                    <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/car.png" alt="car">
+                    <img src="<?php the_field('howEvent-block_left-item_first')?>" alt="car">
                     <div class="">
                         <div class="howEvent-block_left-title">
-                            Точные копии японских гоночных автомобилей
+                            <?php the_field('howEvent-block_left-title_first')?>
                         </div>
                         <div class="howEvent-block_left-text">
-                            Mini-Z - уменьшенные копии брендовых авто в 27
-                            раз. Они развивают скорость до 174км/ч.
+                        <?php the_field('howEvent-block_left-text_first')?>
                         </div>
                     </div>
                 </div>
-                
                 <div class="howEvent-block_left-item">
-                    <img class="howEvent-block_left-desk" src="<?php bloginfo( 'template_url' ) ?>/assets/img/why-location.png" alt="organization">
+                    <img class="howEvent-block_left-desk" src="<?php the_field('howEvent-block_left-desk')?>" alt="organization">
                     <div class="">
                         <div class="howEvent-block_left-title">
-                            Работаем на любой локации
+                        <?php the_field('howEvent-block_left-title_second')?>
                         </div>
                         <div class="howEvent-block_left-text">
-                            Оборудование можно установить на любой
-                            ровной поверхности: в доме, ресторане, 
-                            на асфальте, в офисе.
+                        <?php the_field('howEvent-block_left-text_second')?>
                         </div>
                     </div>
-                    <img class="howEvent-block_left-mobile" src="<?php bloginfo( 'template_url' ) ?>/assets/img/why-location.png" alt="organization">
+                    <img class="howEvent-block_left-mobile" src="<?php the_field('howEvent-block_left-desk')?>" alt="organization">
                 </div>
                 <div class="howEvent-block_left-item">
-                    <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/trophie.png" alt="trophie">
+                    <img src="<?php the_field('howEvent-block_left-item_third')?>" alt="trophie">
                     <div class="">
                         <div class="howEvent-block_left-title">
-                            Церемония награждения
+                        <?php the_field('howEvent-block_left-title_third')?>
                         </div>
                         <div class="howEvent-block_left-text">
-                            Победители получают кубки, медали 
-                            и призы.
+                        <?php the_field('howEvent-block_left-text_third')?>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="howEvent-block_right">
                 <div class="howEvent-block_right-item">
-                    <img class="howEvent-block_right-desk" src="<?php bloginfo( 'template_url' ) ?>/assets/img/electronic.png" alt="electronic">
+                    <img class="howEvent-block_right-desk" src="<?php the_field('howEvent-block_right-desk_first') ?>" alt="electronic">
                     <div class="">
                         <div class="howEvent-block_right-title">
-                            Электронная система тайминга
+                        <?php the_field('howEvent-block_right-title_first') ?>
                         </div>
                         <div class="howEvent-block_right-text">
-                            На каждой машинке есть чип, который засекает
-                            скорость до доли секунды как в больших гонках.
+                        <?php the_field('howEvent-block_right-text_first') ?>
                         </div>
                     </div>
-                    <img class="howEvent-block_right-mobile" src="<?php bloginfo( 'template_url' ) ?>/assets/img/electronic.png" alt="electronic">
+                    <img class="howEvent-block_right-mobile" src="<?php the_field('howEvent-block_right-desk_first') ?>" alt="electronic">
                 </div>
                 <div class="howEvent-block_right-item">
-                    <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/age.png" alt="age">
+                    <img src="<?php the_field('howEvent-block_right-desk_second') ?>" alt="age">
                     <div class="">
                         <div class="howEvent-block_right-title">
-                            Без ограничений по возрасту
+                        <?php the_field('howEvent-block_right-title_second') ?>
                         </div>
                         <div class="howEvent-block_right-text">
-                            Развлечение подходит для взрослых и детей.
+                        <?php the_field('howEvent-block_right-text_second') ?>
                         </div>
                     </div>
                 </div>
                 <div class="howEvent-block_right-item">
-                    <img class="howEvent-block_right-desk" src="<?php bloginfo( 'template_url' ) ?>/assets/img/hardest.png" alt="hard">
+                    <img class="howEvent-block_right-desk" src="<?php the_field('howEvent-block_right-desk_third') ?>" alt="hard">
                     <div class="">
                         <div class="howEvent-block_right-title">
-                            Разные уровни сложности
+                        <?php the_field('howEvent-block_right-title_third') ?>
                         </div>
                         <div class="howEvent-block_right-text">
-                            Сложность конфигурации трассы на ваш выбор:
-                            от 5м/2 и до 100м/2.
+                        <?php the_field('howEvent-block_right-text_third') ?>
                         </div>
                     </div>
-                    <img class="howEvent-block_right-mobile" src="<?php bloginfo( 'template_url' ) ?>/assets/img/hardest.png" alt="hard">
+                    <img class="howEvent-block_right-mobile" src="<?php the_field('howEvent-block_right-desk_third') ?>" alt="hard">
                 </div>
             </div>
         </div>
-        <button class="howEvent-btn btn">Погонять</button>
+        <button class="howEvent-btn btn"><?php the_field('howEvent-btn') ?></button>
     </div>
 
     <section class="galary">
         <div class="galary-title">
             <h2>
-                Галерея наших мероприятий
+            <?php the_field('galary-title') ?>
             </h2>
         </div>
+        <?php the_field('slider') ?>
     </section>
 
     <section class="whyMe">
         <div class="whyMe-title">
-            <h2>Как происходит мероприятие</h2>
+            <h2><?php the_field('whyMe-title') ?></h2>
         </div>
-        <img  class="whyMe-bg_left" src="<?php bloginfo( 'template_url' ) ?>/assets/img/car-right.png" alt="car">
-        <img  class="whyMe-bg_right" src="<?php bloginfo( 'template_url' ) ?>/assets/img/car-left.png" alt="car">
+        <img  class="whyMe-bg_left" src="<?php the_field('whyMe-bg_left') ?>" alt="car">
+    <img  class="whyMe-bg_right" src="<?php the_field('whyMe-bg_right') ?>" alt="car">
         <div class="whyMe-subtitle">
-            На локации вас встретит инструктор и расскажет о правилах 
-            управления моделями. После этого у вас будет возможность
-            попробовать себя в управлении. Когда вы овладеете навыком 
-            управления машины, сможете померяться силами на трассе, 
-            а в конце гонки узнаете результаты заезда и получите призы.
+        <?php the_field('whyMe-subtitle') ?>
         </div>
         <div class="whyMe-block">
             <div class="whyMe-block_item">
-                <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/clock.png" alt="clock">
+                <img src="<?php the_field('whyMe-block_item_first') ?>" alt="clock">
                 <div class="whyMe-block_text">
-                    Более 10 лет занимаемся
-                    организацией
-                    мероприятий
+                <?php the_field('whyMe-block_text_first') ?>
                 </div>
             </div>
             <div class="whyMe-block_item">
-                <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/man.png" alt="man">
+                <img src="<?php the_field('whyMe-block_item_second') ?>" alt="man">
                 <div class="whyMe-block_text">
-                    Сотрудничаем с
-                    ивент агенствами
+                <?php the_field('whyMe-block_text_second') ?>
                 </div>
             </div>
             <div class="whyMe-block_item">
-                <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/gun.png" alt="instructor">
+                <img src="<?php the_field('whyMe-block_item_third') ?>" alt="instructor">
                 <div class="whyMe-block_text">
-                    Инструкторы-спортсмены
-                    сопровождают все
-                    мероприятие
+                <?php the_field('whyMe-block_text_third') ?>
                 </div>
             </div>
             <div class="whyMe-block_item">
-                <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/flag-icon.png" alt="brending">
+                <img src="<?php the_field('whyMe-block_item_fourth') ?>" alt="brending">
                 <div class="whyMe-block_text">
-                    Брендируем трассы и
-                    машинки логотипами
-                    вашей компании
+                <?php the_field('whyMe-block_text_fourth') ?>
                 </div>
             </div>
         </div>

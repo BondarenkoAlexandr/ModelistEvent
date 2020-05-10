@@ -14,43 +14,42 @@
     <link rel="preload" href="css/fonts.css" as="style">
     <link media="none" onload="media='all'" rel="stylesheet" type="text/css", href="css/style.min.css"> -->
     <?php wp_head();?>
-    <title>Организация мероприятий компании Моделист12</title>
+    <title><?php bloginfo('description')?></title>
 </head>
 <body>
     <header class="header">
         <div class="header-background">
             <video width="100%" height="auto" preload="auto" autoplay=""
             loop="loop" poster="">
-                <source src="<?php bloginfo( 'template_url' ) ?>/assets/video/back.mp4" type="video/mp4"></source>
+                <source src="<?php the_field( 'header-background' ) ?>" type="video/mp4"></source>
             </video>
         </div>
        <nav class="header-nav">
             <div class="header-logo">
-                <a href="#"><img src="<?php bloginfo( 'template_url' ) ?>/assets/img/logo.png" alt="логотип"></a>
+                <a href="#"><img src="<?php the_field( 'header-logo' ) ?>" alt="логотип"></a>
             </div>
             <div class="header-nav_social">
                 <div class="header-nav_lang">
-                    <a href="#">ru</a>/<a href="#">ua</a>
+                    <a href="<?php echo get_site_url();?>?lang=ru">ru</a>/<a href="<?php echo get_site_url();?>/?lang=uk">ua</a>
                 </div>
                 <div class="header-nav_phone">
-                    <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/phone.png" alt="phone"><a href="tel:+380954836969">095-483-69-69</a>
+                    <img src="<?php bloginfo( 'template_url' ) ?>/assets/img/phone.png" alt="phone"><a href="tel:+380954836969"><?php the_field( 'header-nav_phone' ) ?></a>
                 </div>
             </div>
        </nav>
        <div class="header-title">
-        <h1>Гонки на радиоуправляемых машинках с выездом <br> на локацию</h1>
+        <h1><?php the_field( 'header-title' ) ?></h1>
        </div>
        <div class="header-subtitle">
-        <h3>Свежая идея для корпоратива, фестиваля, тимбилдинга, День рождения, открытия автосалона
+        <h3><?php the_field( 'header-subtitle' ) ?>
             <br> <span class="header-subtitle_mobile">
-                Работаем по всем городам 
-                <br> Украины
+            <?php the_field( 'header-subtitle_mobile' ) ?>
             </span></h3>
        </div>
        <button class="header-btn btn">
-            Заказать
+       <?php the_field( 'header-btn' ) ?>
        </button>
        <div class="header-botTitle">
-            Работаем по всем городам Украины
+       <?php the_field( 'header-botTitle' ) ?>
         </div>    
     </header>
